@@ -20,4 +20,10 @@ export class ClienteService {
   getAll(){
     return this.http.get<[Cliente]>(this.url);
   }
+  remove(id: any){
+    return this.http.delete(this.url+'?id=' + id);
+  }
+  create(cliente: Cliente){
+    return this.http.post(this.url, cliente);
+  }
 }
