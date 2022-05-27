@@ -35,4 +35,17 @@ export class ClientePage implements OnInit {
       });
     });
   }
+  atualizar( c: Cliente){
+    this.modalCtrl.create({
+      component: ModalClientePage,
+      componentProps: {c}
+    }).then(modal => {
+      modal.present();
+      return modal.onDidDismiss();
+    }).then(({data}) => {
+      this.service.getAll().subscribe(resposta => {
+        this.clientes = resposta;
+      });
+    });
+  }
 }
