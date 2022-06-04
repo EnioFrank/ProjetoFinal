@@ -3,7 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 import { Produto, ProdutoService } from 'src/app/servicos/produto.service';
 @Component({
-  selector: 'app-modal-produto',
+  selector: './app-modal-produto',
   templateUrl: './modal-produto.page.html',
   styleUrls: ['./modal-produto.page.scss'],
 })
