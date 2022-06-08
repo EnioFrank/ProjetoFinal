@@ -27,7 +27,7 @@ export class ProdutoPage implements OnInit {
   }
   novoProduto(){
     this.modalCtrl.create({
-      component: ModalProdutoPage
+      component: ModalProdutoPage,
     }).then(modal => {
       modal.present();
       return modal.onDidDismiss();
